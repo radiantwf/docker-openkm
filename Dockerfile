@@ -4,7 +4,7 @@ ENV CATALINA_HOME /usr/local/tomcat
 
 RUN apt-get -y update  && \
     apt-get -y install libreoffice imagemagick swftools liblog4j1.2-java libgnumail-java ant curl unzip sudo tar libreoffice-common
-RUN aptitude -y install imagemagick perlmagick
+
 RUN apt-get clean && \
     rm -rf /var/lib/apt/lists/* && \
     rm -rf /tmp/*
