@@ -10,7 +10,7 @@ RUN apt-get clean && \
     rm -rf /tmp/*
 
 RUN curl -L https://jaist.dl.sourceforge.net/project/openkm/6.3.4/OpenKM-6.3.4.zip -o /usr/local/openkm-tomcat-bundle.zip && \
-    unzip /usr/local/openkm-tomcat-bundle.zip -d /usr/local/ && \
+    unzip /usr/local/openkm-tomcat-bundle.zip -d /opt/openkm/ && \
     rm /usr/local/openkm-tomcat-bundle.zip && \
     ln -s $CATALINA_HOME /opt/openkm
 
