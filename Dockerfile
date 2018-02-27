@@ -15,6 +15,6 @@ COPY docker-entrypoint.sh /usr/local/bin/
 RUN chmod +x /usr/local/bin/docker-entrypoint.sh
 
 VOLUME $CATALINA_HOME/webapps/repository
-ENTRYPOINT ["docker-entrypoint.sh"]
+CMD ["catalina.sh", "run"]
 
 EXPOSE 8080 2002
