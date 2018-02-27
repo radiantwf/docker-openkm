@@ -11,6 +11,7 @@ RUN curl -L https://jaist.dl.sourceforge.net/project/openkm/6.3.4/OpenKM-6.3.4.z
     unzip /usr/local/openkm.zip -d $CATALINA_HOME/webapps/ && \
     rm /usr/local/openkm.zip
 
+RUN mkdir -p /OpenKM
 COPY docker-entrypoint.sh /usr/local/bin/
 RUN chmod +x /usr/local/bin/docker-entrypoint.sh
 
