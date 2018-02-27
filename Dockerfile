@@ -9,7 +9,8 @@ RUN apt-get clean && \
 
 RUN curl -L https://jaist.dl.sourceforge.net/project/openkm/6.3.4/OpenKM-6.3.4.zip -o /usr/local/openkm.zip && \
     unzip /usr/local/openkm.zip -d /opt/openkm/ && \
-    rm /usr/local/openkm.zip
+    rm /usr/local/openkm.zip && \
+    ln -s $CATALINA_HOME /opt/openkm
 
 COPY docker-entrypoint.sh /usr/local/bin/
 RUN chmod +x /usr/local/bin/docker-entrypoint.sh
