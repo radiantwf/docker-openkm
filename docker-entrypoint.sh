@@ -9,4 +9,4 @@ else
    echo "File $FILE does not exist. Create a DB."
 fi
 
-/usr/local/tomcat/bin/catalina.sh run
+catalina.sh run
